@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Jua&display=swap');
+
 body{
     marin: 0;
     padding: 0;
     background: url(Login_background.jpg);
     background-size: cover;
-    font-family: sans-serif;
 }
 
 .login-box{
@@ -32,15 +33,16 @@ h1{
     margin: 0;
     padding: 0 0 20px;
     text-align: center;
-    font-size: 22px;
+    font-size: 30px;
     color: #FD8469;
+    font-family: 'Jua';
 }
 
 .login-box p{
     margin: 0;
     padding: 0;
-    font-weight: bold;
     color: black;
+    font-family: 'Jua';
 }
 
 .login-box input{
@@ -65,7 +67,13 @@ h1{
     height: 40px;
     background: #FD8469;
     font-size: 18px;
-    font-weight: bold;
+    font-family: Jua;
     border-radius: 20px;
     color: white;
+}
+
+a {
+    color: #444444;
+    width: 100%;
+    margin-bottom: 5px;
 }
