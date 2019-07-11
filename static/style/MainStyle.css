@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Jua&display=swap');
+
+body {
+    marin: 0;
+    padding: 0;
+    background-size: cover;
+}
+
+.map-container {
+    height: 100%;
+    width: 50%;
+}
+
+.citypath  {
+    fill:#d8d8d3;
+    fill-rule:evenodd;
+}
+
+.test {
+    fill:green
+}
+
+.line {
+    fill:none;
+    stroke:#000;
+    stroke-miterlimit:10;
+    stroke-width:0.71px;
+}
