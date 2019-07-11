@@ -12,6 +12,7 @@ config = {
 }
 
 firebase = pyrebase.initialize_app(config)
+db = firebase.database()
 
 auth = firebase.auth()
 
@@ -23,9 +24,9 @@ auth = firebase.auth()
 # print(auth.get_account_info(user['idToken']))
 #auth.get_account_info(user['idToken'])
 
-
-@app.route("/", methods=['GET', 'POST'])
-def home():
+@app.route("/")
+@app.route("/Login", methods=['GET', 'POST'])
+def Login():
     unsuccessful = 'Please check your credentials'
     successful = 'Login successful'
     if request.method == 'POST':
@@ -40,6 +41,21 @@ def home():
                 'Login.html',
                 title="Travel",
             )
+
+@app.route("/Main", methods=['GET', 'POST'])
+def Main():
+    id = request.form['id']
+    return render_template('Main.html', id=id)
+
+
+@app.route("/Logout", methods=['GET', 'POST'])
+def logout(request):
+    try:
+        auth.signOut()
+    except KeyError:
+        pass
+    return render_template('Login.html', us=unsuccessful)
+
 
 if __name__ == '__main__':
   app.run(debug='true')
