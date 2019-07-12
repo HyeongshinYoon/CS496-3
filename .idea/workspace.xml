@@ -1,47 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1969446-02eb-4282-951b-7058d94f5baf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/style/MainStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/style/tent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/bootstrap/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/bootstrap/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/bootstrap/js/bootstrap.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/bootstrap/js/bootstrap.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/jquery-easing/jquery.easing.compatibility.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/jquery-easing/jquery.easing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/jquery-easing/jquery.easing.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/jquery/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/jquery/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/jquery/jquery.min.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/jquery/jquery.slim.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/jquery/jquery.slim.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/jquery/jquery.slim.min.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/Login_background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/style/Login_background.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/Loginstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style/Loginstyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/MainStyle.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/map.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/style/map.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/paper-plane.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/style/paper-plane.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Main.html" afterDir="false" />
-    </list>
+    <list default="true" id="e1969446-02eb-4282-951b-7058d94f5baf" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -56,8 +16,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/Login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+            <state relative-caret-position="228">
+              <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -65,11 +25,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/Main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
+            <state relative-caret-position="402">
               <caret line="868" column="72" selection-start-line="868" selection-start-column="72" selection-end-line="868" selection-end-column="72" />
               <folding>
                 <element signature="n#svg#0;n#div#1;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="e#3391#3418#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/bootstrap.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -87,8 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/style/MainStyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="834">
-              <caret line="188" selection-start-line="188" selection-end-line="188" />
+            <state relative-caret-position="532">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
         </entry>
@@ -183,6 +155,12 @@
               <item name="CS496-3" type="b2602c69:ProjectViewProjectNode" />
               <item name="CS496-3" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CS496-3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS496-3" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="style" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -211,10 +189,11 @@
       <recent name="C:\Users\q\workspaces\CS496-3" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\q\workspaces\CS496-3\static\js" />
+      <recent name="C:\Users\q\workspaces\CS496-3\static\css" />
       <recent name="C:\Users\q\workspaces\CS496-3\static" />
       <recent name="C:\Users\q\workspaces\CS496-3\style" />
       <recent name="C:\Users\q\workspaces\CS496-3" />
-      <recent name="C:\Users\q\workspaces\CS496-3\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -239,12 +218,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1562834717646</updated>
-      <workItem from="1562834718740" duration="19842000" />
+      <workItem from="1562834718740" duration="20533000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19842000" />
+    <option name="totallyTimeSpent" value="20533000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -257,6 +236,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
@@ -301,8 +281,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/Login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+        <state relative-caret-position="228">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -315,20 +295,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/style/MainStyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="834">
-          <caret line="188" selection-start-line="188" selection-end-line="188" />
+        <state relative-caret-position="532">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/fontawesome-free/css/all.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/bootstrap/css/bootstrap.css">
+    <entry file="file://$PROJECT_DIR$/static/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3306" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/jquery/jquery.js">
+    <entry file="file://$PROJECT_DIR$/static/js/jquery/jquery.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/scroll.js">
@@ -338,9 +318,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/Main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
+        <state relative-caret-position="402">
           <caret line="868" column="72" selection-start-line="868" selection-start-column="72" selection-end-line="868" selection-end-column="72" />
           <folding>
             <element signature="n#svg#0;n#div#1;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" />
