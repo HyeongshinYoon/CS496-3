@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Kirang+Haerang&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Gothic+A1&display=swap');
+
+h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    color: #343a40;
+}
 
 h2 {
     font-family: 'Gothic A1', sans-serif;
@@ -11,6 +19,13 @@ h2 {
 h3 {
     font-family: 'Gothic A1', sans-serif;
     font-size: 1em;
+}
+
+.subheading {
+    font-weight: 500;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.5rem;
+    color: #555555;
 }
 
 .grid-container {

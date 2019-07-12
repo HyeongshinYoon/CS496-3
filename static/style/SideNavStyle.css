@@ -16,23 +16,6 @@ body {
 }
 
 h1 {
-    font-family: 'Kirang Haerang', cursive;
-    font-weight: 600;
-    color: #343a40;
-    text-transform: uppercase;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 500;
-    color: #343a40;
-}
-
-h1 {
     font-size: 5.5rem;
     line-height: 5.5rem;
 }
