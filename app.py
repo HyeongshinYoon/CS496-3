@@ -57,6 +57,14 @@ def logout(request):
     return render_template('Login.html', us=unsuccessful)
 
 
+@app.route("/SignUp")
+def signup():
+    if request.metho == 'POST':
+        email = request.form['text']
+        password = request.form['password']
+        re_password = request.form['re_password']
+
+
 if __name__ == '__main__':
   app.run(debug='true')
 # -> main.html
