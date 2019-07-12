@@ -2306,8 +2306,8 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #30a0e2;
+  border-color: #30a0e2;
 }
 
 .btn-primary:hover {
@@ -4437,7 +4437,6 @@ input[type="button"].btn-block {
 .card {
   position: relative;
   display: -ms-flexbox;
-  display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
   min-width: 0;
@@ -4542,7 +4541,6 @@ input[type="button"].btn-block {
 }
 
 .card-img-top {
-  width: 100%;
   border-top-left-radius: calc(0.25rem - 1px);
   border-top-right-radius: calc(0.25rem - 1px);
 }

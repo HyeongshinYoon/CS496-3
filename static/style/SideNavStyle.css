@@ -1,20 +1,7 @@
-/*!
- * Start Bootstrap - Resume v5.0.7 (https://startbootstrap.com/template-overviews/resume)
- * Copyright 2013-2019 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-resume/blob/master/LICENSE)
- */
-
 @import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Kirang+Haerang&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
-
-html {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
 
 body {
     font-family: 'Noto Sans KR', sans-serif;
@@ -70,23 +57,12 @@ p.lead {
     font-size: 1.5rem;
 }
 
-g .citygroup  {
-    fill: lightgray;
-    fill-rule:evenodd;
+.bg-primary {
+    background-color: #42CCE2 !important;
 }
 
-g .citygroup:hover {
-    fill: #99c1de;
-}
-
-#sideNav .navbar-nav .nav-item .nav-link {
-    font-weight: 800;
-    letter-spacing: 0.05rem;
-    text-transform: uppercase;
-}
-
-#sideNav .navbar-toggler:focus {
-    outline-color: #d48a6e;
+.nav-button {
+    width: 100%;
 }
 
 @media (min-width: 992px) {
@@ -143,59 +119,22 @@ g .citygroup:hover {
     #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
         display: block;
     }
-    .logo {
+    #sideNav .logo {
         width: 90%;
         margin-top: 40px;
     }
+}
+
+#sideNav .navbar-nav .nav-item .nav-link {
+    font-weight: 800;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
 }
 
 section.resume-section {
     padding-top: 40px !important;
     padding-bottom: 3rem !important;
     max-width: 75rem;
-}
-
-section.resume-section .resume-item .resume-date {
-    min-width: none;
-}
-
-@media (min-width: 768px) {
-    section.resume-section {
-        min-height: 100vh;
-    }
-    section.resume-section .resume-item .resume-date {
-        min-width: 18rem;
-    }
-}
-
-@media (min-width: 992px) {
-    section.resume-section {
-        padding-top: 40px !important;
-        padding-bottom: 3rem !important;
-    }
-}
-
-@media only screen and (max-width: 992px){
-    .logo {
-        width: 50%;
-        align-self: center;
-    }
-}
-
-.bg-primary {
-    background-color: #42CCE2 !important;
-}
-
-.text-primary {
-    color: #30a0e2 !important;
-}
-
-a {
-    color: #BD5D38;
-}
-
-a:hover, a:focus, a:active {
-    color: #824027;
 }
 
 .nav-button {
@@ -240,6 +179,6 @@ button:hover {
     margin-bottom: 40px;
 }
 
-.map-container {
-    height: 100%;
+.nav-link .clicked {
+    color: white; !important;
 }

@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Kirang+Haerang&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Gothic+A1&display=swap');
+
+h2 {
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+h3 {
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 1em;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px 10px;
+}
+
+.post {
+    position: relative;
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    width: 100%;
+}
+
+.post-img {
+    width: 100%;
+    border-radius: calc(0.25rem - 1px);
+    height: 200px;
+    object-fit: cover;
+}
+
+.post-body {
+    width: 100%;
+    padding: 1.25rem;
+    flex: 1 1 auto;
+}
+
+.post-title {
+    margin-bottom: 0.75rem;
+}
+
+.post-subtitle {
+    margin-top: -0.375rem;
+    margin-bottom: 20px;
+}
+
+.post-footer {
+    padding: 0.75rem 1.25rem;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.post-footer .post-date {
+    text-align: left;
+    color: gray;
+}
+
+.post-footer .username {
+    align-self: end;
+    color: #30a0e2;
+}

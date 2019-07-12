@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Jua&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Kirang+Haerang&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
 
 body{
     marin: 0;
@@ -76,4 +79,8 @@ a {
     color: #444444;
     width: 100%;
     margin-bottom: 5px;
+}
+
+.selected-item {
+    color: white;
 }
