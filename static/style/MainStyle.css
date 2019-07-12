@@ -7,6 +7,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Kirang+Haerang&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
 
 body {
     font-family: 'Noto Sans KR', sans-serif;
@@ -187,51 +188,49 @@ a:hover, a:focus, a:active {
     color: #824027;
 }
 
-.navigation {
-  width: 100%;
-  background-color: black;
+.nav-button {
+    width: 100%;
 }
 
-img {
-  width: 25px;
-  border-radius: 50px;
-  float: left;
+button {
+    background: none;
+    text-align: center;
+    width: 100%;
 }
 
-.logout {
-  font-size: .8em;
-  position: relative;
-  right: -18px;
-  bottom: -4px;
-  overflow: hidden;
-  letter-spacing: 3px;
-  opacity: 0;
-  transition: opacity .45s;
-  -webkit-transition: opacity .35s;
-
+button,
+button::after {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
-.button {
-	text-decoration: none;
-	float: right;
-  padding: 12px;
-  margin: 15px;
-  color: white;
-  width: 25px;
-  background-color: black;
-  transition: width .35s;
-  -webkit-transition: width .35s;
-  overflow: hidden
+button::before,
+button::after {
+    background: #fff;
+    content: '';
+    position: absolute;
+    z-index: -1;
 }
 
-a:hover {
-  width: 100px;
+button:hover {
+    background: white;
+    color: #42CCE2;
 }
 
-a:hover .logout{
-  opacity: .9;
+.logout-button {
+    border: 2px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1em;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    padding: 5px;
+    margin-bottom: 40px;
 }
 
-a {
-  text-decoration: none;
+.logo {
+    width: 90%;
+    margin-top: 40px;
 }
