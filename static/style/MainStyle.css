@@ -1,174 +1,40 @@
-/*!
- * Start Bootstrap - Resume v5.0.7 (https://startbootstrap.com/template-overviews/resume)
- * Copyright 2013-2019 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-resume/blob/master/LICENSE)
- */
-
 @import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Kirang+Haerang&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
 
-body {
-    font-family: 'Noto Sans KR', sans-serif;
-    padding-top: 54px;
-}
-
-@media (min-width: 992px) {
-    body {
-        padding-top: 0;
-        padding-left: 17rem;
-    }
-}
-
 h1 {
-    font-family: 'Kirang Haerang', cursive;
+    font-size: 4rem;
+    line-height: 4rem;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 600;
     color: #343a40;
-    text-transform: uppercase;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 500;
-    color: #343a40;
-}
-
-h1 {
-    font-size: 5.5rem;
-    line-height: 5.5rem;
 }
 
 h2 {
-    font-size: 3.5rem;
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
 }
 
 h3 {
-    font-size: 2rem;
-}
-
-p.lead {
-    font-size: 1.15rem;
-    font-weight: 400;
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 1em;
 }
 
 .subheading {
-    text-transform: uppercase;
     font-weight: 500;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 1.5rem;
-}
-
-.dev-icons {
-    font-size: 3rem;
-}
-
-.dev-icons .list-inline-item i:hover {
-    color: #BD5D38;
+    color: #555555;
 }
 
 g .citygroup  {
-    fill: #d3d3d3;
+    fill: lightgray;
     fill-rule:evenodd;
 }
 
 g .citygroup:hover {
-    fill: #30a0e2;
-}
-
-#sideNav .navbar-nav .nav-item .nav-link {
-    font-weight: 800;
-    letter-spacing: 0.05rem;
-    text-transform: uppercase;
-}
-
-#sideNav .navbar-toggler:focus {
-    outline-color: #d48a6e;
-}
-
-@media (min-width: 992px) {
-    #sideNav {
-        text-align: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        width: 17rem;
-        height: 100vh;
-    }
-    #sideNav .navbar-brand {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        margin: auto auto 0;
-        padding: 0.5rem;
-    }
-    #sideNav .navbar-brand .img-profile {
-        max-width: 10rem;
-        max-height: 10rem;
-        border: 0.5rem solid rgba(255, 255, 255, 0.2);
-    }
-    #sideNav .navbar-collapse {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: flex-start;
-        -webkit-box-flex: 0;
-        -ms-flex-positive: 0;
-        flex-grow: 0;
-        width: 100%;
-        margin-bottom: auto;
-    }
-    #sideNav .navbar-collapse .navbar-nav {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        width: 100%;
-    }
-    #sideNav .navbar-collapse .navbar-nav .nav-item {
-        display: block;
-    }
-    #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
-        display: block;
-    }
-}
-
-section.resume-section {
-    padding-top: 5rem !important;
-    padding-bottom: 3rem !important;
-    max-width: 75rem;
-}
-
-section.resume-section .resume-item .resume-date {
-    min-width: none;
-}
-
-@media (min-width: 768px) {
-    section.resume-section {
-        min-height: 100vh;
-    }
-    section.resume-section .resume-item .resume-date {
-        min-width: 18rem;
-    }
-}
-
-@media (min-width: 992px) {
-    section.resume-section {
-        padding-top: 3rem !important;
-        padding-bottom: 3rem !important;
-    }
+    fill: #99c1de;
 }
 
 .bg-primary {
@@ -179,59 +45,48 @@ section.resume-section .resume-item .resume-date {
     color: #30a0e2 !important;
 }
 
-a {
-    color: #BD5D38;
+.nav-button {
+    width: 100%;
 }
 
-a:hover, a:focus, a:active {
-    color: #824027;
+button {
+    background: none;
+    text-align: center;
+    width: 100%;
 }
 
-.navigation {
-  width: 100%;
-  background-color: black;
+button,
+button::after {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
-img {
-  width: 25px;
-  border-radius: 50px;
-  float: left;
+button::before,
+button::after {
+    background: #fff;
+    content: '';
+    position: absolute;
+    z-index: -1;
 }
 
-.logout {
-  font-size: .8em;
-  position: relative;
-  right: -18px;
-  bottom: -4px;
-  overflow: hidden;
-  letter-spacing: 3px;
-  opacity: 0;
-  transition: opacity .45s;
-  -webkit-transition: opacity .35s;
-
+button:hover {
+    background: white;
+    color: #42CCE2;
 }
 
-.button {
-	text-decoration: none;
-	float: right;
-  padding: 12px;
-  margin: 15px;
-  color: white;
-  width: 25px;
-  background-color: black;
-  transition: width .35s;
-  -webkit-transition: width .35s;
-  overflow: hidden
+.logout-button {
+    border: 2px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1em;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    padding: 5px;
+    margin-bottom: 40px;
 }
 
-a:hover {
-  width: 100px;
-}
-
-a:hover .logout{
-  opacity: .9;
-}
-
-a {
-  text-decoration: none;
+.map-container {
+    height: 100%;
 }
