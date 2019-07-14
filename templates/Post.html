@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>Let's Travel</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../static/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="../static/style/SideNavStyle.css" rel="stylesheet">
-    <link href="../static/style/TravelDiaryStyle.css" rel="stylesheet">
-
+    <link href="../static/style/PostStyle.css" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
@@ -48,25 +45,35 @@
     </div>
 </nav>
 
-<div class="container-fluid p-0">
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center">
-        <div class="w-100 flex-column">
-            <h1 class="mb-0">Travel Diary</h1>
-            <div class="subheading mb-5 mt-1">자신만의 여행 기록을 채워보세요.
+<div class="container-fluid p-0 h-100">
+    <section class="post-title-image">
+        <img class="w-100 h-100" style="object-fit: cover;" src="../static/style/Login_background.jpg">
+        <div id="overlay">
+            <div class="post-tag-container d-inline">
+                <span class="post-tag">#Danyang</span>
+                <span class="post-tag">#Danyang</span>
             </div>
-            <div class="grid-container">
-                <div class="post grid-item">
-                    <img class="post-img" src="../static/style/Login_background.jpg">
-                    <div class="post-body">
-                        <h2 class="post-title">Post Title</h2>
-                        <h3 class="post-subtitle">Post Subtitle</h3>
-                        <a href="Post.html" class="btn btn-primary">Read More &rarr;</a>
-                    </div>
-                    <div class="post-footer">
-                        <a class="post-date">2019-07-12</a>
-                        <a class="username" href="#">CheddarChoi</a>
-                    </div>
-                </div>
+            <p class="post-title">형신이와 함께하는 코딩여행</p>
+            <p class="post-subtitle">와 너무 재미있다 와 너무 재미있다 와 너무 재미있다 와 너무 재미있다 와 너무 재미있다 와 너무 재미있다</p>
+        </div>
+    </section>
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center flex-column">
+        <div>
+            <p class="date">2019-07-13</p>
+<!--            <div class="line"></div>-->
+        </div>
+        <div class="row">
+            <div class="gallery">
+                <img class="post-image" src="../static/style/Login_background.jpg">
+                <img class="post-image" src="../static/style/1.jpg">
+            </div>
+            <div class="gallery">
+                <img class="post-image" src="../static/style/2.jpg">
+                <img class="post-image" src="../static/style/3.jpg">
+            </div>
+            <div class="gallery">
+                <img class="post-image" src="../static/style/4.jpg">
+                <img class="post-image" src="../static/style/5.jpg">
             </div>
         </div>
     </section>

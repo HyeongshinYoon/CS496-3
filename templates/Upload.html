@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Let's Travel</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../static/style/SideNavStyle.css" rel="stylesheet">
+    <link href="../static/style/UploadStyle.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <div class="nav-button">
+        <img class="logo" src="../static/style/logo.png">
+    </div>
+    <a class="navbar-brand js-scroll-trigger">
+        <span class="d-none d-lg-block">
+            <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="../static/style/tent.png" alt="">
+        </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" style="color: #fff;" href="Main.html">Fill the Map</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="TravelDiary.html">Travel Diary</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Upload.html">Add Diary</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">My Page</a>
+            </li>
+        </ul>
+    </div>
+    <div class="nav-button">
+        <button class="logout-button" action="/Logout">LOGOUT</button>
+    </div>
+</nav>
+<div class="container-fluid p-0">
+    <section class="resume-section p-3 p-lg-5 d-flex w-100 flex-column">
+        <h1 class="mb-0">Add Diary</h1>
+        <div class="subheading mb-5 mt-1">새로운 여행 기록을 채워보세요.</div>
+        <div class="h-100">
+            <form action="" method="post" enctype="multipart/form-data">
+                <div class="row mb-3">
+                    <legend class="col-md-3 col-form-label pt-0 subheading">Post contents</legend>
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label for="title">Title:</label>
+                            <input type="text" class="form-control username" id="title" placeholder="Title of Diary..." name="title">
+                        </div>
+                        <div class="form-group">
+                            <label for="subtitle">Subtitle:</label>
+                            <input type="text" class="form-control email" id="subtitle" placeholder="Subtitle of Diary..." name="subtitle">
+                        </div>
+                        <div class="custom-file">
+                            <input type="file" multiple="multiple" class="custom-file-input" id="photos">
+                            <label class="custom-file-label" for="photos">Choose file...</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-9 offset-md-3">
+                        <button type="submit" class="btn btn-primary btn-customized">Add</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
+
+<!-- Bootstrap core JavaScript -->
+<script src="../static/js/jquery/jquery.min.js"></script>
+<script src="../static/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="../static/js/jquery-easing/jquery.easing.min.js"></script>
+
+<script type="text/javascript">
+    $(".custom-file-input").on("change", function() {
+        if (this.files.length == 1){
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        }
+        else{
+            $(this).siblings(".custom-file-label").addClass("selected").html(this.files.length + " files uploaded");
+        }
+    });
+</script>
+
+</body>
+
+</html>

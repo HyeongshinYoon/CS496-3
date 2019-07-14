@@ -10,17 +10,6 @@ h1 {
     color: #343a40;
 }
 
-h2 {
-    font-family: 'Gothic A1', sans-serif;
-    font-weight: bold;
-    font-size: 2em;
-}
-
-h3 {
-    font-family: 'Gothic A1', sans-serif;
-    font-size: 1em;
-}
-
 .subheading {
     font-weight: 500;
     font-family: 'Noto Sans KR', sans-serif;
@@ -30,11 +19,13 @@ h3 {
 
 g .citygroup  {
     fill: lightgray;
-    fill-rule:evenodd;
+    fill-rule: evenodd;
+    stroke: white;
+    stroke-width: 0.5;
 }
 
 g .citygroup:hover {
-    fill: #99c1de;
+    fill: #42CCE2;
 }
 
 .bg-primary {
@@ -89,4 +80,13 @@ button:hover {
 
 .map-container {
     height: 100%;
+}
+
+.background-image {
+    position: absolute;
+    margin-left: 17rem;
+    margin-top: 17rem;
+    width: 500px;
+    height: 700px;
+    object-fit: cover;
 }
