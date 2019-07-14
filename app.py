@@ -1,6 +1,6 @@
 import pyrebase
 from flask import *
-app = Flask(__name__)
+
 config = {
     "apiKey": "AIzaSyDmn0dJl4lvTASIPtPD5vfHIoG6IIWg5dc",
     "authDomain": "travel-b97bd.firebaseapp.com",
@@ -11,18 +11,10 @@ config = {
     "appId": "1:850989183342:web:6eb717f390c612c8"
 }
 
+app = Flask(__name__)
 firebase = pyrebase.initialize_app(config)
 db = firebase.database()
-
 auth = firebase.auth()
-
-# email = raw_input('Please enter your email\n')
-# password = raw_input('Please enter your password\n')
-#
-# user = auth.sign_in_with_email_and_password(email, password)
-# # auth.send_email_verification(user['idToken'])
-# print(auth.get_account_info(user['idToken']))
-#auth.get_account_info(user['idToken'])
 
 @app.route("/")
 @app.route("/Login", methods=['GET', 'POST'])
@@ -43,6 +35,7 @@ def Login():
             )
 
 @app.route("/Main", methods=['GET', 'POST'])
+# @login_required
 def Main():
     id = request.form['id']
     return render_template('Main.html', id=id)
@@ -55,14 +48,6 @@ def logout(request):
     except KeyError:
         pass
     return render_template('Login.html', us=unsuccessful)
-
-
-@app.route("/SignUp")
-def signup():
-    if request.metho == 'POST':
-        email = request.form['text']
-        password = request.form['password']
-        re_password = request.form['re_password']
 
 
 if __name__ == '__main__':
