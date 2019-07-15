@@ -33,7 +33,7 @@
                 <a class="nav-link" style="color: #fff;" href="/main">Fill the Map</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/getDatas">Travel Diary</a>
+                <a class="nav-link" href="/traveldiary">Travel Diary</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="upload">Add Diary</a>
@@ -711,7 +711,7 @@
         alert(selected_group.id);
         event.preventDefault();
         $.ajax({
-            url: '/getData',
+            url: '/setData',
             data: {'selected_group_id': selected_group.id},
             method: 'POST',
             success: function(response) {

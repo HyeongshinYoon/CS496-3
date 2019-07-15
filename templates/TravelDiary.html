@@ -33,7 +33,7 @@
                 <a class="nav-link" href="/main">Fill the Map</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" style="color: #fff;" href="/getDatas">Travel Diary</a>
+                <a class="nav-link" style="color: #fff;" href="/traveldiary">Travel Diary</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/upload">Add Diary</a>
@@ -56,7 +56,7 @@
             <h1 class="mb-0">Travel Diary</h1>
             <div class="subheading mb-5 mt-1">자신만의 여행 기록을 채워보세요.
             </div>
-            <div class="grid-container">
+            <div class="grid-container" id="post-container">
                 <div class="post grid-item">
                     <img class="post-img" src="../static/style/Login_background.jpg">
                     <div class="post-body">
@@ -74,4 +74,100 @@
     </section>
 </div>
 </body>
+<script type="text/javascript">
+var cityid = window.location.href.split('?')[1].split('=')[1];
+
+    if (cityid != null){
+        httpGetAsync("/getData/" + cityid, getCityData);
+    }
+    else {
+        httpGetAsync("/getDatas", getAllData);
+    }
+
+    function httpGetAsync(theUrl, callback)
+    {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() {
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                callback(xmlHttp.responseText);
+        }
+        xmlHttp.open("GET", theUrl, true); // true for asynchronous
+        xmlHttp.send(null);
+    }
+
+    function getCityData(responseText){
+        var dict = JSON.parse(responseText);
+        var keylist = Object.keys(dict);
+        var objectlist = Object.values(dict);
+        for (var i = 0; i < objectlist.length; i++) {
+            var object = Object.values(objectlist[i]);
+            console.log(object);
+            for (var j = 0 ; j < object.length ; j++) {
+                var contents = object[j][0];
+                var postkey = keylist[i];
+                makePost(contents["title"], contents["subtitle"], contents["tag"], postkey);
+            }
+        }
+    }
+
+    function getAllData(responseText){
+        var dict = JSON.parse(responseText);
+        var keylist = Object.keys(dict);
+        var objectlist = Object.values(dict);
+        for (var i = 0; i < objectlist.length; i++) {
+            var object = Object.values(objectlist[i]);
+            console.log(object);
+            for (var j = 0 ; j < object.length ; j++) {
+                var contents = object[j][0];
+                var postkey = i;
+                makePost(contents["title"], contents["subtitle"], contents["tag"], postkey);
+            }
+        }
+    }
+
+    function makePost(title_content, subtitle_content, tag_content, postkey)
+    {
+        var container = document.getElementById("post-container");
+
+        var img = document.createElement("img");
+        img.src = "../static/style/Login_background.jpg";
+        img.className = "post-img";
+
+        var title = document.createElement("H2");
+        var title_text = document.createTextNode(title_content);
+        title.appendChild(title_text);
+        title.className = "post-title";
+
+        var subtitle = document.createElement("H3");
+        var subtitle_text = document.createTextNode(subtitle_content);
+        subtitle.appendChild(subtitle_text);
+        subtitle.className = "post-subtitle";
+
+        var button = document.createElement("a");
+        var button_text = document.createTextNode("Read More");
+        button.appendChild(button_text);
+        button.href = "/Post?postkey="+postkey;
+        button.className = "btn btn-primary";
+
+        var post_body = document.createElement('div');
+        post_body.className = "post-body";
+        post_body.appendChild(title);
+        post_body.appendChild(subtitle);
+        post_body.appendChild(button);
+
+        var footer = "<div class=\"post-footer\">" +
+            "<a class=\"post-date\">2019-07-12 </a>" +
+            "<a class=\"username\" href=\"#\">CheddarChoi</a>" +
+            "</div>";
+
+        var post_item = document.createElement('div');
+        post_item.className = "post grid-item";
+        post_item.appendChild(img);
+        post_item.appendChild(post_body);
+        post_item.insertAdjacentHTML('beforeend', footer);
+
+        //console.log(post_item);
+        container.appendChild(post_item);
+    }
+</script>
 </html>
