@@ -30,13 +30,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" style="color: #fff;" href="Main.html">Fill the Map</a>
+                <a class="nav-link" style="color: #fff;" href="/main">Fill the Map</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="TravelDiary.html">Travel Diary</a>
+                <a class="nav-link" href="/getDatas">Travel Diary</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="Upload.html">Add Diary</a>
+                <a class="nav-link" href="upload">Add Diary</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="">My Page</a>
@@ -44,7 +44,9 @@
         </ul>
     </div>
     <div class="nav-button">
-        <button class="logout-button" action="/Logout">LOGOUT</button>
+        <form method="post" action="/logout">
+            <button class="logout-button">LOGOUT</button>
+        </form>
     </div>
 </nav>
 
@@ -54,6 +56,7 @@
             <h1 class="mb-0">Fill the Map - <span class="text-primary">Korea</span></h1>
             <div class="subheading mb-5 mt-1">한국의 곳곳을 여행하고 자신만의 여행 지도를 채워보세요.
             </div>
+            <form method="post" aciton="/traveldiary/">
             <div class="map-container">
                 <svg height="700px" viewBox="150 30 500 450">
                     <defs id="defs">
@@ -668,6 +671,7 @@
                     </g>
                 </svg>
             </div>
+        </form>
         </div>
     </section>
 </div>
@@ -683,6 +687,7 @@
     $(".citygroup").on("click",function (event) {
         var selected_path = event.target;
         var selected_group = selected_path.closest('g');
+        var selected_group_name = selected_group.id;
 
         const children = $(selected_group).children();
 
@@ -704,9 +709,18 @@
             children[j].setAttribute("fill","url(#"+selected_group.id + ")");
         }
         alert(selected_group.id);
+        event.preventDefault();
+        $.ajax({
+            url: '/getData',
+            data: {'selected_group_id': selected_group.id},
+            method: 'POST',
+            success: function(response) {
+                var obj = JSON.parse(response);
+                location.href=obj;
+            }
+        });
     });
 </script>
-
 </body>
 
 </html>
