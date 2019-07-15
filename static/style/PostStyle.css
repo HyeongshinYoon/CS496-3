@@ -80,3 +80,7 @@ html{
     margin: 10px;
     object-fit: cover;
 }
+
+.gallery-container {
+    width: 100%;
+}
