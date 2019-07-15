@@ -684,10 +684,59 @@
 <script src="../static/js/jquery-easing/jquery.easing.min.js"></script>
 
 <script type="text/javascript">
-    $(".citygroup").on("click",function (event) {
-        var selected_path = event.target;
-        var selected_group = selected_path.closest('g');
-        var selected_group_name = selected_group.id;
+
+
+    window.onload = function() {
+        getCityList();
+    };
+
+    function getCityList(){
+        var getcitylist = new XMLHttpRequest();
+        getcitylist.open( "GET", "/citylist", false ); // false for synchronous request
+        getcitylist.send( null );
+
+        var json = JSON.parse(getcitylist.responseText);
+        for (var i = 0 ; i < json.length ; i++) {
+            httpGetAsync(json[i].eng_name, fillImage);
+        }
+    }
+
+    function httpGetAsync(cityid, callback)
+    {
+        var xmlHttp = new XMLHttpRequest();
+        var theUrl = "/getData/" + cityid;
+        xmlHttp.onreadystatechange = function() {
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                callback(cityid, xmlHttp.responseText);
+        }
+        xmlHttp.open("GET", theUrl, true); // true for asynchronous
+        xmlHttp.send(null);
+    }
+
+    function fillImage(cityid, responseText) {
+        if(responseText.length != 2){
+            fillCity(cityid, getCityImage(responseText));
+        }
+    }
+
+    function getCityImage(responseText){
+        var dict = JSON.parse(responseText);
+        var objectlist = Object.values(dict);
+        for (var i = 0; i < objectlist.length; i++) {
+            var object = Object.values(objectlist[i]);
+            for (var j = 0 ; j < object.length ; j++) {
+                var contents = object[j][0];
+                var xmlHttp = new XMLHttpRequest();
+                xmlHttp.open("GET", "/getPhoto/\""+contents["files"][0]+"\"", false); // true for asynchronous
+                xmlHttp.send(null);
+                return xmlHttp.responseText;
+            }
+        }
+
+    }
+
+    function fillCity(cityid, image) {
+        var selected_group = document.getElementById(cityid);
 
         const children = $(selected_group).children();
 
@@ -698,18 +747,21 @@
             "\" patternUnits=\"userSpaceOnUse\" width=\"" +
             bBox.width + "\" height=\"" + bBox.height +
             "\" x=\"" + bBox.x + "\" y=\"" + bBox.y +
-            "\"><image xlink:href=\"../static/style/square.jpg\" width=\"" +
+            "\"><image xlink:href=\"" +
+            image + "\" width=\"" +
             bBox.width + "\" height=\"" + bBox.height + "\" preserveAspectRatio=\"xMidYMid slice\"/></pattern>";
-
-        console.log(newPattern);
 
         defs.insertAdjacentHTML('beforeend', newPattern);
 
         for (var j=0; j<children.length ; j++){
             children[j].setAttribute("fill","url(#"+selected_group.id + ")");
         }
-        alert(selected_group.id);
-        event.preventDefault();
+    }
+
+    $(".citygroup").on("click",function (event) {
+        var selected_path = event.target;
+        var selected_group = selected_path.closest('g');
+
         $.ajax({
             url: '/setData',
             data: {'selected_group_id': selected_group.id},

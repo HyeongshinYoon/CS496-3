@@ -78,4 +78,5 @@ html{
 .post-image {
     width: 100%;
     margin: 10px;
+    object-fit: cover;
 }

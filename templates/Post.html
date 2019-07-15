@@ -27,13 +27,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="/main">Fill the Map</a>
+                <a class="nav-link" style="color: #fff;" href="Main.html">Fill the Map</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" style="color: #fff;" href="/traveldiary">Travel Diary</a>
+                <a class="nav-link" href="TravelDiary.html">Travel Diary</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/upload">Add Diary</a>
+                <a class="nav-link" href="Upload.html">Add Diary</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="">My Page</a>
@@ -49,9 +49,7 @@
     <section class="post-title-image">
         <img class="w-100 h-100" style="object-fit: cover;" src="../static/style/Login_background.jpg">
         <div id="overlay">
-            <div class="post-tag-container d-inline">
-                <span class="post-tag">#Danyang</span>
-                <span class="post-tag">#Danyang</span>
+            <div class="post-tag-container d-inline" id="tag-container">
             </div>
             <p class="post-title">형신이와 함께하는 코딩여행</p>
             <p class="post-subtitle">와 너무 재미있다 와 너무 재미있다 와 너무 재미있다 와 너무 재미있다 와 너무 재미있다 와 너무 재미있다</p>
@@ -63,15 +61,15 @@
 <!--            <div class="line"></div>-->
         </div>
         <div class="row">
-            <div class="gallery">
+            <div class="gallery" id="gallery1">
                 <img class="post-image" src="../static/style/Login_background.jpg">
                 <img class="post-image" src="../static/style/1.jpg">
             </div>
-            <div class="gallery">
+            <div class="gallery" id="gallery2">
                 <img class="post-image" src="../static/style/2.jpg">
                 <img class="post-image" src="../static/style/3.jpg">
             </div>
-            <div class="gallery">
+            <div class="gallery" id="gallery3">
                 <img class="post-image" src="../static/style/4.jpg">
                 <img class="post-image" src="../static/style/5.jpg">
             </div>
@@ -79,4 +77,71 @@
     </section>
 </div>
 </body>
+
+<!-- Bootstrap core JavaScript -->
+<script src="../static/js/jquery/jquery.min.js"></script>
+<script src="../static/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="../static/js/jquery-easing/jquery.easing.min.js"></script>
+
+<script type="text/javascript">
+    var postid = window.location.href.split('?')[1].split('=')[1];
+    httpGetAsync("/getDataId/" + postid, getPostData);
+
+    function httpGetAsync(theUrl, callback)
+    {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() {
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                callback(xmlHttp.responseText);
+        }
+        xmlHttp.open("GET", theUrl, true); // true for asynchronous
+        xmlHttp.send(null);
+    }
+
+    // var test_responsetText = "{\"-LjqyuVzcHaw1hAyVXLh\": [{\"files\": [\"cat.png\", \"cat_flower.png\"], \"subtitle\": \"world\", \"tag\": [\"Gunsan\", \"Gunpo\"], \"title\": \"hello\"}]}";
+    // getPostData(test_responsetText);
+
+    function getPostData(responseText){
+
+        var imagenum = 0;
+
+        var dict = JSON.parse(responseText);
+        var objectlist = Object.values(dict);
+        for (var i = 0; i < objectlist.length; i++) {
+            var object = Object.values(objectlist[i]);
+            for (var j = 0 ; j < object.length ; j++) {
+                var title  = object[j]["title"];
+                var subtitle  = object[j]["subtitle"];
+                $('.post-title').text(title);
+                $('.post-subtitle').text(subtitle);
+
+                var tags = object[j]["tag"];
+
+                for (var k = 0 ; k < tags.length ; k++) {
+                    var tag = "<span class=\"post-tag\">#" + tags[k] + "</span>";
+                    var target = document.getElementById("tag-container");
+                    target.insertAdjacentHTML('beforeend', tag);
+                }
+
+                var files = object[j]["files"];
+                for (var k = 0 ; k < files.length ; k++) {
+                    var xmlHttp = new XMLHttpRequest();
+                    xmlHttp.open("GET", "/getPhoto/"+files[k], false); // true for asynchronous
+                    xmlHttp.send(null);
+
+                    var img = document.createElement("img");
+                    img.src = xmlHttp.responseText;
+                    img.className = "post-image";
+                    var target = document.getElementById("gallery"+ ((imagenum % 3)+1));
+                    imagenum ++;
+                    target.appendChild(img);
+                }
+            }
+        }
+
+    }
+</script>
+
 </html>

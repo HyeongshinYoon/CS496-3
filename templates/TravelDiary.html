@@ -57,18 +57,6 @@
             <div class="subheading mb-5 mt-1">자신만의 여행 기록을 채워보세요.
             </div>
             <div class="grid-container" id="post-container">
-                <div class="post grid-item">
-                    <img class="post-img" src="../static/style/Login_background.jpg">
-                    <div class="post-body">
-                        <h2 class="post-title">Post Title</h2>
-                        <h3 class="post-subtitle">Post Subtitle</h3>
-                        <a href="/post" class="btn btn-primary">Read More &rarr;</a>
-                    </div>
-                    <div class="post-footer">
-                        <a class="post-date">2019-07-12</a>
-                        <a class="username" href="#">CheddarChoi</a>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -100,7 +88,6 @@ if (window.location.href.includes("?")){
         var objectlist = Object.values(dict);
         for (var i = 0; i < objectlist.length; i++) {
             var object = Object.values(objectlist[i]);
-            console.log(object);
             for (var j = 0 ; j < object.length ; j++) {
                 var contents = object[j][0];
                 var postkey = keylist[i];
@@ -115,7 +102,6 @@ if (window.location.href.includes("?")){
         var objectlist = Object.values(dict);
         for (var i = 0; i < objectlist.length; i++) {
             var object = Object.values(objectlist[i]);
-            console.log(object);
             for (var j = 0 ; j < object.length ; j++) {
                 var contents = object[j][0];
                 var postkey = i;
@@ -145,7 +131,7 @@ if (window.location.href.includes("?")){
         var button = document.createElement("a");
         var button_text = document.createTextNode("Read More");
         button.appendChild(button_text);
-        button.href = "/Post?postkey="+postkey;
+        button.href = "/post?postkey="+postkey;
         button.className = "btn btn-primary";
 
         var post_body = document.createElement('div');
@@ -164,8 +150,6 @@ if (window.location.href.includes("?")){
         post_item.appendChild(img);
         post_item.appendChild(post_body);
         post_item.insertAdjacentHTML('beforeend', footer);
-
-        //console.log(post_item);
         container.appendChild(post_item);
     }
 </script>
