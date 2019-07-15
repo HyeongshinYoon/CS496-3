@@ -62,9 +62,40 @@
     </section>
 </div>
 </body>
+
+<!-- Bootstrap core JavaScript -->
+<script src="../static/js/jquery/jquery.min.js"></script>
+<script src="../static/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="../static/js/jquery-easing/jquery.easing.min.js"></script>
+
 <script type="text/javascript">
-if (window.location.href.includes("?")){
-    var cityid = window.location.href.split('?')[1].split('=')[1];
+    $(".custom-file-input").on("change", function() {
+        if (this.files.length == 1){
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        }
+        else{
+            $(this).siblings(".custom-file-label").addClass("selected").html(this.files.length + " files uploaded");
+        }
+    });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/js/bootstrap-multiselect.min.js" integrity="sha256-qoj3D1oB1r2TAdqKTYuWObh01rIVC1Gmw9vWp1+q5xw=" crossorigin="anonymous"></script>
+
+<!-- Initialize the plugin: -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#tag').multiselect({
+            enableFiltering: true
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    if (window.location.href.includes("?")){
+        var cityid = window.location.href.split('?')[1].split('=')[1];
         httpGetAsync("/getData/" + cityid, getCityData);
     }
     else {
@@ -88,34 +119,47 @@ if (window.location.href.includes("?")){
         var objectlist = Object.values(dict);
         for (var i = 0; i < objectlist.length; i++) {
             var object = Object.values(objectlist[i]);
+            console.log(object);
             for (var j = 0 ; j < object.length ; j++) {
                 var contents = object[j][0];
                 var postkey = keylist[i];
-                makePost(contents["title"], contents["subtitle"], contents["tag"], postkey);
+
+                var xmlHttp = new XMLHttpRequest();
+                xmlHttp.open("GET", "/getPhoto/"+contents["files"][0], false); // true for asynchronous
+                xmlHttp.send(null);
+                var photoUrl = xmlHttp.responseText;
+
+                makePost(contents["title"], contents["subtitle"], contents["tag"], postkey, photoUrl);
             }
         }
     }
 
     function getAllData(responseText){
         var dict = JSON.parse(responseText);
-        var keylist = Object.keys(dict);
         var objectlist = Object.values(dict);
         for (var i = 0; i < objectlist.length; i++) {
             var object = Object.values(objectlist[i]);
+            console.log(object);
             for (var j = 0 ; j < object.length ; j++) {
                 var contents = object[j][0];
                 var postkey = i;
-                makePost(contents["title"], contents["subtitle"], contents["tag"], postkey);
+
+                var xmlHttp = new XMLHttpRequest();
+                xmlHttp.open("GET", "/getPhoto/"+contents["files"][0], false); // true for asynchronous
+                xmlHttp.send(null);
+                var photoUrl = xmlHttp.responseText;
+
+                makePost(contents["title"], contents["subtitle"], contents["tag"], postkey, photoUrl);
             }
         }
     }
 
-    function makePost(title_content, subtitle_content, tag_content, postkey)
+    function makePost(title_content, subtitle_content, tag_content, postkey, photoUrl)
     {
         var container = document.getElementById("post-container");
 
         var img = document.createElement("img");
-        img.src = "../static/style/Login_background.jpg";
+        img.src = photoUrl;
         img.className = "post-img";
 
         var title = document.createElement("H2");
@@ -150,7 +194,10 @@ if (window.location.href.includes("?")){
         post_item.appendChild(img);
         post_item.appendChild(post_body);
         post_item.insertAdjacentHTML('beforeend', footer);
+
+        //console.log(post_item);
         container.appendChild(post_item);
     }
+
 </script>
 </html>

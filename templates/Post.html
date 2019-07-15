@@ -27,13 +27,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" style="color: #fff;" href="Main.html">Fill the Map</a>
+                <a class="nav-link" href="/main">Fill the Map</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="TravelDiary.html">Travel Diary</a>
+                <a class="nav-link" style="color: #fff;" href="/traveldiary">Travel Diary</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="Upload.html">Add Diary</a>
+                <a class="nav-link" href="/upload">Add Diary</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="">My Page</a>
@@ -41,7 +41,9 @@
         </ul>
     </div>
     <div class="nav-button">
-        <button class="logout-button" action="/Logout">LOGOUT</button>
+        <form action="/logout">
+            <button class="logout-button">LOGOUT</button>
+        </form>
     </div>
 </nav>
 
@@ -62,16 +64,10 @@
         </div>
         <div class="row">
             <div class="gallery" id="gallery1">
-                <img class="post-image" src="../static/style/Login_background.jpg">
-                <img class="post-image" src="../static/style/1.jpg">
             </div>
             <div class="gallery" id="gallery2">
-                <img class="post-image" src="../static/style/2.jpg">
-                <img class="post-image" src="../static/style/3.jpg">
             </div>
             <div class="gallery" id="gallery3">
-                <img class="post-image" src="../static/style/4.jpg">
-                <img class="post-image" src="../static/style/5.jpg">
             </div>
         </div>
     </section>
@@ -120,7 +116,8 @@
                 var tags = object[j]["tag"];
 
                 for (var k = 0 ; k < tags.length ; k++) {
-                    var tag = "<span class=\"post-tag\">#" + tags[k] + "</span>";
+                    console.log(tags[k]);
+                    var tag = "<a style=\"color: #fff;\" href=\"/traveldiary?cityId=" + tags[k] + "\"><span class=\"post-tag\">#" + tags[k] + "</span></a>";
                     var target = document.getElementById("tag-container");
                     target.insertAdjacentHTML('beforeend', tag);
                 }
