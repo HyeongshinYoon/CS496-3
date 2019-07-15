@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1969446-02eb-4282-951b-7058d94f5baf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/js/Main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/style/UploadStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Post.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Upload.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/bootstrap-multiselect.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery/jquery.multi-select.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/UploadTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/style/MainStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style/MainStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style/UploadStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style/UploadStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/TravelDiary.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/TravelDiary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Upload.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,86 +22,70 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.13429107">
-      <split-first>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/templates/Main.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="478">
-                  <caret line="685" column="41" lean-forward="true" selection-start-line="685" selection-start-column="41" selection-end-line="685" selection-end-column="41" />
-                  <folding>
-                    <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#button#0;n#nav#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#g#0;n#svg#0;n#div#1;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/TravelDiary.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="250">
-                  <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
-                  <folding>
-                    <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#button#0;n#nav#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/static/style/MainStyle.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="190">
-                  <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/templates/Upload.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="321">
-                  <caret line="57" column="30" lean-forward="true" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
-                  <folding>
-                    <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#button#0;n#nav#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/static/css/bootstrap.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-348">
-                  <caret line="3716" column="45" selection-start-line="3716" selection-start-column="28" selection-end-line="3716" selection-end-column="45" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/static/style/UploadStyle.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2451">
-                  <caret line="129" column="1" selection-start-line="129" selection-start-column="1" selection-end-line="129" selection-end-column="1" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Upload.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-114">
+              <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+              <folding>
+                <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#button#0;n#nav#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/UploadTest.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+              <folding>
+                <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#button#0;n#nav#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/css/bootstrap.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="355">
+              <caret line="2514" column="21" selection-start-line="2514" selection-start-column="21" selection-end-line="2514" selection-end-column="21" />
+              <folding>
+                <element signature="e#32297#32532#2" expanded="true" />
+                <element signature="e#33405#33559#1" expanded="true" />
+                <element signature="e#33600#33835#1" expanded="true" />
+                <element signature="e#37094#37371#2" expanded="true" />
+                <element signature="e#38272#38426#1" expanded="true" />
+                <element signature="e#38467#38744#1" expanded="true" />
+                <element signature="e#71960#72148#2" expanded="true" />
+                <element signature="e#72397#72534#2" expanded="true" />
+                <element signature="e#72973#73107#2" expanded="true" />
+                <element signature="e#74770#74924#1" expanded="true" />
+                <element signature="e#89201#89435#2" expanded="true" />
+                <element signature="e#90424#90664#2" expanded="true" />
+                <element signature="e#125682#125860#2" expanded="true" />
+                <element signature="e#125914#126092#2" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/style/UploadStyle.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="701">
+              <caret line="127" column="14" lean-forward="true" selection-start-line="127" selection-start-column="14" selection-end-line="127" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -113,7 +98,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>resume-</find>
       <find>hover</find>
       <find>sec</find>
       <find>@med</find>
@@ -143,6 +127,7 @@
       <find>button</find>
       <find>form-control</find>
       <find>custom-file-label</find>
+      <find>dropdown-menu</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -156,7 +141,6 @@
         <option value="$PROJECT_DIR$/style/Loginstyle.css" />
         <option value="$PROJECT_DIR$/style/MainStyle.css" />
         <option value="$PROJECT_DIR$/templates/TravelDiaryStyle.css" />
-        <option value="$PROJECT_DIR$/static/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/static/style/SideNavStyle.css" />
         <option value="$PROJECT_DIR$/static/style/TravelDiaryStyle.css" />
         <option value="$PROJECT_DIR$/static/style/Loginstyle.css" />
@@ -166,12 +150,16 @@
         <option value="$PROJECT_DIR$/static/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/static/style/PostStyle.css" />
         <option value="$PROJECT_DIR$/templates/UploadService.java" />
-        <option value="$PROJECT_DIR$/templates/Main.html" />
         <option value="$PROJECT_DIR$/templates/Post.html" />
-        <option value="$PROJECT_DIR$/templates/TravelDiary.html" />
         <option value="$PROJECT_DIR$/static/style/MainStyle.css" />
-        <option value="$PROJECT_DIR$/static/style/UploadStyle.css" />
+        <option value="$PROJECT_DIR$/templates/TravelDiary.html" />
+        <option value="$PROJECT_DIR$/templates/search.php" />
+        <option value="$PROJECT_DIR$/templates/Main.html" />
+        <option value="$PROJECT_DIR$/templates/UploadTest.html" />
+        <option value="$PROJECT_DIR$/static/css/bootstrap-multiselect.css" />
         <option value="$PROJECT_DIR$/templates/Upload.html" />
+        <option value="$PROJECT_DIR$/static/style/UploadStyle.css" />
+        <option value="$PROJECT_DIR$/static/css/bootstrap.css" />
       </list>
     </option>
   </component>
@@ -208,7 +196,21 @@
               <item name="CS496-3" type="b2602c69:ProjectViewProjectNode" />
               <item name="CS496-3" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap.css" type="620a8d5e:NestingTreeNode" />
+            </path>
+            <path>
+              <item name="CS496-3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS496-3" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CS496-3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS496-3" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="jquery" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CS496-3" type="b2602c69:ProjectViewProjectNode" />
@@ -249,11 +251,11 @@
       <recent name="C:\Users\q\workspaces\CS496-3" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\q\workspaces\CS496-3\static\js\jquery" />
+      <recent name="C:\Users\q\workspaces\CS496-3\assets" />
+      <recent name="C:\Users\q\workspaces\CS496-3\static" />
       <recent name="C:\Users\q\workspaces\CS496-3\static\style" />
       <recent name="C:\Users\q\workspaces\CS496-3\static\js" />
-      <recent name="C:\Users\q\workspaces\CS496-3\static\css" />
-      <recent name="C:\Users\q\workspaces\CS496-3\static" />
-      <recent name="C:\Users\q\workspaces\CS496-3\style" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -278,12 +280,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1562834717646</updated>
-      <workItem from="1562834718740" duration="77148000" />
+      <workItem from="1562834718740" duration="93539000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77148000" />
+    <option name="totallyTimeSpent" value="93539000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -397,13 +399,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/bootstrap-grid.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="1006" lean-forward="true" selection-start-line="1006" selection-end-line="1006" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/style/1.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -470,6 +465,43 @@
     <entry file="file://$PROJECT_DIR$/static/style/map.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/TravelDiary.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+          <folding>
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#button#0;n#nav#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/bootstrap-grid.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1677">
+          <caret line="1006" selection-start-line="1006" selection-end-line="1006" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="351" column="69" selection-start-line="351" selection-start-column="69" selection-end-line="351" selection-end-column="69" />
+          <folding>
+            <element signature="n#button#0;n#nav#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/style/MainStyle.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -477,29 +509,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/style/UploadStyle.css">
+    <entry file="file://$PROJECT_DIR$/static/css/bootstrap-multiselect.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2451">
-          <caret line="129" column="1" selection-start-line="129" selection-start-column="1" selection-end-line="129" selection-end-column="1" />
+        <state relative-caret-position="1273">
+          <caret line="67" column="1" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/TravelDiary.html">
+    <entry file="file://$PROJECT_DIR$/templates/UploadTest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+        <state relative-caret-position="95">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
           <folding>
             <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#button#0;n#nav#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="6" column="30312" selection-start-line="6" selection-start-column="30312" selection-end-line="6" selection-end-column="30312" />
+        <state relative-caret-position="214">
+          <caret line="6" column="28041" selection-end-line="7" selection-end-column="45" />
           <folding>
             <element signature="e#25770#26004#2" expanded="true" />
             <element signature="e#26808#26961#1" expanded="true" />
@@ -519,34 +551,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/bootstrap.css">
+    <entry file="file://$PROJECT_DIR$/templates/Upload.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-348">
-          <caret line="3716" column="45" selection-start-line="3716" selection-start-column="28" selection-end-line="3716" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="685" column="41" lean-forward="true" selection-start-line="685" selection-start-column="41" selection-end-line="685" selection-end-column="41" />
+        <state relative-caret-position="-114">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
           <folding>
             <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#button#0;n#nav#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#g#0;n#svg#0;n#div#1;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Upload.html">
+    <entry file="file://$PROJECT_DIR$/static/style/UploadStyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="57" column="30" lean-forward="true" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+        <state relative-caret-position="701">
+          <caret line="127" column="14" lean-forward="true" selection-start-line="127" selection-start-column="14" selection-end-line="127" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="2514" column="21" selection-start-line="2514" selection-start-column="21" selection-end-line="2514" selection-end-column="21" />
           <folding>
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#button#0;n#nav#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#32297#32532#2" expanded="true" />
+            <element signature="e#33405#33559#1" expanded="true" />
+            <element signature="e#33600#33835#1" expanded="true" />
+            <element signature="e#37094#37371#2" expanded="true" />
+            <element signature="e#38272#38426#1" expanded="true" />
+            <element signature="e#38467#38744#1" expanded="true" />
+            <element signature="e#71960#72148#2" expanded="true" />
+            <element signature="e#72397#72534#2" expanded="true" />
+            <element signature="e#72973#73107#2" expanded="true" />
+            <element signature="e#74770#74924#1" expanded="true" />
+            <element signature="e#89201#89435#2" expanded="true" />
+            <element signature="e#90424#90664#2" expanded="true" />
+            <element signature="e#125682#125860#2" expanded="true" />
+            <element signature="e#125914#126092#2" expanded="true" />
           </folding>
         </state>
       </provider>
