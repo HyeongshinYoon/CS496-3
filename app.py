@@ -43,7 +43,7 @@ def citytitles():
 
 @app.route("/setData", methods=['GET', 'POST'])
 def setData():
-    return json.dumps('traveldiary?cityId=Seoul')
+    return json.dumps('traveldiary?cityId=')
 
 @app.route("/getData/<name>", methods=['GET', 'POST'])
 def getData(name):
@@ -52,7 +52,7 @@ def getData(name):
     global group_post
     group_post = {}
     if group_post_id.each() == None:
-        return json.dumps('traveldiary')
+        return json.dumps('')
     else:
         for id in group_post_id.each():
             post = db.child("posts").child(id.val()).get()

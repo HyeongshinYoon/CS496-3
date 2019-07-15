@@ -716,7 +716,7 @@
             method: 'POST',
             success: function(response) {
                 var obj = JSON.parse(response);
-                location.href=obj;
+                location.href=obj+selected_group.id;
             }
         });
     });

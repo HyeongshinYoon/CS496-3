@@ -75,9 +75,8 @@
 </div>
 </body>
 <script type="text/javascript">
-var cityid = window.location.href.split('?')[1].split('=')[1];
-
-    if (cityid != null){
+if (window.location.href.includes("?")){
+    var cityid = window.location.href.split('?')[1].split('=')[1];
         httpGetAsync("/getData/" + cityid, getCityData);
     }
     else {
