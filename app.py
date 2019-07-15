@@ -63,7 +63,6 @@ def getData(name):
 @app.route("/getDataId/<id>", methods=['GET', 'POST'])
 def getDataId(id):
     post = db.child("posts").child(id).get().val()
-    print(post)
     return json.dumps(post)
 
 @app.route("/getDatas", methods=['GET', 'POST'])
@@ -73,8 +72,8 @@ def getDatas():
 
 @app.route("/getPhoto/<filename>", methods=['GET', 'POST'])
 def getPhoto(filename=None):
-    photo = storage.child(filename).get_url(True)
-    print(photo)
+    text = filename.strip('"')
+    photo = storage.child(text).get_url("hello.png")
     return photo
 
 @app.route("/logout", methods=['GET', 'POST'])
@@ -104,7 +103,6 @@ def upload():
             files.append(photo.filename)
 
         data = [{"title":title,"subtitle":subtitle,"tag":tag,"files":files}]
-        print(json.dumps(data))
         db.child('posts').child(last_post_id).push(data)
 
         for tag_id in tag:
